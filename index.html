@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>LGBTQuiz</title>
+    <LINK href="style.css" rel="stylesheet" type="text/css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+    </style>
+</head>
+
+<body>
+    <div class="BodyHelp"></div>
+    <div class="BodyHelp2"></div>
+    <div class="BodyHelp3"></div>
+    <script src="main.js"></script>
+    <div class="MainBlock">
+        <h1 class="Titel">Спеціальний КВІЗ!!!</h1>
+        <h4 class="SubTitel">для вас в місяць гордості</h4>
+        <p>Кількість гравців (від 1 до 6): </p>
+        <input type="number" id="playerCount" value=1 min=1 max=6>
+        <input type="button" id="SubPlayBtn" title="Підтвердити" value="ПОЧАТИ">
+        <div class="Quiz" id="QuizDiv" style="display: none;">
+            <h3 id="Question">Обери правильну назву для показаного прапору</h3>
+            <p>кожний гравець по черзі обирає свою відповідь, (!)переобрати не можна, 22 питання</p>
+            <img id="FlagImg"></img>
+            <div class="AllBtnHolder">
+                <div id="BtnHolder">
+                    <input type="button" class="BtnAnsVar" id="BtnAnsV1">
+                    <input type="button" class="BtnAnsVar" id="BtnAnsV2">
+                    <input type="button" class="BtnAnsVar" id="BtnAnsV3">
+                    <input type="button" class="BtnAnsVar" id="BtnAnsV4">
+                </div>
+                <input type="button" id="NextBtn" value="ДАЛІ" title="Наступне питання" disabled=true>
+            </div>
+        </div>
+        <div class="Ansver" id="AnsverDiv" style="display: none;">
+            <h2 id="AnsverText"></h2>
+            <h4 id="AnsverName"></h4>
+            <p id="AnsverDesc"></p>
+        </div>
+    </div>
+</body>
+</html>

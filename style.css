@@ -1,0 +1,196 @@
+:root{
+    --red:rgb(220, 139, 139);
+    --orange:rgb(213, 177, 142);
+    --yellow:rgb(224, 224, 125);
+    --green:rgb(155, 233, 155);
+    --blue:rgb(157, 157, 226);
+    --purple:rgb(230, 168, 230);
+    --dark_main:rgb(27, 22, 47);
+    --darker_main:rgb(19, 15, 37);
+
+    --light_main: rgb(76, 70, 88);
+    --lighterish_main: rgb(117, 114, 125);
+    --lighter_main: rgb(161, 159, 167);
+}
+
+html{
+    margin: 0;
+    padding: 0;
+    min-height: calc(100% - 4vmin);
+    height: max-content;
+    background: 
+    linear-gradient(90deg, var(--red), var(--orange), var(--yellow), var(--green), var(--blue), var(--purple),var(--red), var(--orange), var(--yellow), var(--green), var(--blue), var(--purple), var(--red));
+    background-size: 200% auto;
+    background-position: 0 0;
+    animation: bgGr 6s linear infinite;
+    position: relative;
+    color: var(--lighterish_main);
+    z-index: 1;
+    border: 2vmin solid var(--dark_main);
+    font-family: 'Press Start 2P', cursive;
+    align-items: center;
+    text-align: center;
+    overflow-y: scroll;
+}
+
+body{
+    width: 100%;
+    min-height: 100%; 
+    height: max-content;
+    padding: 0;
+    margin: 0;
+}
+.BodyHelp3{
+    background-color: var(--darker_main);
+    position: absolute;
+    display: block;
+    top: 5vmin;
+    left: 5vmin;
+    right: 5vmin;
+    bottom: 5vmin;
+    z-index: -1;
+    border: 2vmin solid var(--dark_main);
+    min-height: calc(100% - 10vmin); 
+    height: max-content;
+}
+
+.BodyHelp2{
+    background: url(./back.png);
+    background-size: 100vw;
+    background-repeat: repeat;
+    background-position: 2px 2px;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -2;
+    min-height: 100%; 
+    height: max-content;
+}
+
+.BodyHelp{
+    background: url(./back.png);
+    background-size: 100vw;
+    background-repeat: repeat;
+    filter: invert(17%) sepia(6%) saturate(4615%) hue-rotate(203deg) brightness(98%) contrast(88%);
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    min-height: 100%; 
+    height: max-content;
+}
+
+@keyframes bgGr {
+    0%{
+        background-position: 0 0;
+    }
+    100%{
+        background-position: 100% 0;
+    }
+    
+}
+
+@media (max-width: 721px) {
+    html{
+        background: 
+        linear-gradient(0deg, var(--red), var(--orange), var(--yellow), var(--green), var(--blue), var(--purple),var(--red), var(--orange), var(--yellow), var(--green), var(--blue), var(--purple), var(--red));
+        background-size: auto 200%;
+        animation: bgGr2 6s linear infinite;
+    }
+    
+    @keyframes bgGr2 {
+        0%{
+            background-position: 0 0;
+        }
+        100%{
+            background-position: 0 100%;
+        }
+        
+    }
+}
+
+.MainBlock{
+    padding: 10vmin;
+    min-height: calc(100% - 20vmin);
+    height: max-content;
+}
+
+p{
+    font-size: 1.5vmin;
+    margin-bottom: 1vmin;
+}
+
+input{
+    font-family: 'Press Start 2P', cursive;
+    border-radius: 0;
+    border: 0.5vmin solid var(--light_main);
+    background: var(--lighter_main);
+    padding: 1vmin;
+    text-align: center;
+    margin-bottom: 3vmin;
+}
+
+input:disabled{
+    background: var(--lighterish_main);
+}
+
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+  }
+
+input:focus{
+    outline: none;
+}
+
+h1{
+    margin: 0;
+    margin-bottom: 3vmin;
+    color: var(--lighter_main);
+}
+
+.Quiz{
+    position: relative;
+    align-items: center;
+}
+
+#FlagImg{
+    width: 70%;
+    min-height: 10px;
+    border: 1vmin solid var(--light_main);
+    margin-bottom: 5vmin;
+}
+
+#BtnHolder{
+    flex: 3;
+    position: relative;
+}
+.BtnAnsVar{
+    width: 80%;
+    display: block;
+    margin: 0;
+    margin-right: 10%;
+    margin-left: 5%;
+}
+
+#NextBtn{
+    flex: 1;
+    margin-bottom: 0;
+    margin-right: 5%;
+}
+
+.AllBtnHolder{
+    display: flex;
+    flex-direction: row;
+}
